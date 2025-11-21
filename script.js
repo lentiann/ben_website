@@ -48,45 +48,7 @@ function updateThemeIcon(isLight) {
     themeIcon.textContent = isLight ? '☀️' : '🌙';
 }
 
-// Create arc text effect
-function createArcText() {
-    const text = "Wir füllen Ihren Termin Kalender";
-    const container = document.getElementById('arcText');
-    const radius = 100; // Reduced radius for more compact arc
-    const angleSpan = 140; // Total angle span in degrees for arc
-    const startAngle = -70; // Starting angle for upward arc
-
-    // Clear container
-    container.innerHTML = '';
-
-    // Calculate angle per character
-    const anglePerChar = angleSpan / (text.length - 1);
-
-    // Create spans for each character
-    text.split('').forEach((char, index) => {
-        const span = document.createElement('span');
-        span.textContent = char === ' ' ? '\u00A0' : char; // Use non-breaking space
-
-        // Calculate rotation angle for this character
-        const angle = startAngle + (anglePerChar * index);
-        const angleRad = (angle - 90) * (Math.PI / 180);
-
-        // Calculate position for upward arc - positioned lower in container
-        const x = Math.cos(angleRad) * radius;
-        const y = Math.sin(angleRad) * radius + 50; // Adjusted offset to prevent overlap
-
-        // Apply transformation
-        span.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px) rotate(${angle}deg)`;
-
-        container.appendChild(span);
-    });
-}
-
-// Initialize arc text
-createArcText();
-
-// Recreate on window resize
-window.addEventListener('resize', createArcText);
+// Arc text functionality removed - using logo instead
 
 // Helper function to show status messages
 function showStatus(message, type) {
@@ -123,16 +85,14 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     // Get form data
     const formData = {
         name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
         phone: document.getElementById('phone').value || 'Nicht angegeben',
         subject: document.getElementById('subject').value,
         message: document.getElementById('message').value
     };
 
     // Create mailto link with form data
-    const mailtoLink = `mailto:info@pp-supplier.de?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+    const mailtoLink = `mailto:pundpsuppliergbr@gmx.de?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
         `Name: ${formData.name}\n` +
-        `E-Mail: ${formData.email}\n` +
         `Telefon: ${formData.phone}\n\n` +
         `Nachricht:\n${formData.message}`
     )}`;
