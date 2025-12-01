@@ -15,14 +15,12 @@
             <h1 class="logo-text">P&P Supplier GbR</h1>
         </div>
         <p class="tagline">Ihr Partner für Automatenstellplätze</p>
-        <button class="theme-toggle" id="themeToggle" aria-label="Theme umschalten">
-            <span id="themeIcon">🌙</span>
-        </button>
     </header>
 
     <!-- Navigation -->
     <nav class="nav">
         <a href="#home">Startseite</a>
+        <a href="#ueber-uns">Über Uns</a>
         <a href="#kontakt">Kontakt</a>
         <a href="#formular">Anfrage</a>
         <a href="#impressum">Impressum</a>
@@ -33,7 +31,7 @@
         <!-- Hero Section -->
         <section id="home" class="hero-section">
             <div class="hero-logo-container">
-                <img src="logo.png" alt="P&P Supplier GbR" class="hero-logo">
+                <img src="logo.png" alt="P&P Supplier GbR" class="hero-logo hero-logo-large">
             </div>
             <p class="hero-subtitle">Lassen Sie sich jetzt einen Stellplatz bei uns suchen.</p>
         </section>
@@ -61,7 +59,7 @@
                 <div class="guarantee-box">
                     <h3>Unsere Garantie</h3>
                     <p><strong>Wir garantieren, innerhalb maximal drei Monaten Ihren gewünschten Termin zu finden.</strong></p>
-                    <p class="exclusion"><strong>Ausschluss:</strong> Wir suchen keine Stellplätze auf Festivals oder anderweitigen Events.</p>
+                    <p class="exclusion"><strong>Ausschluss:</strong> Wir suchen keine Stellplätze auf Festivals oder anderweitigen Events. <span class="exclusion-small">Wir garantieren nicht für eine Zusage des Stellplatzes.</span></p>
                 </div>
 
                 <p class="highlight">Mit uns sparen Sie sich jegliche Arbeit und Zeit</p>
@@ -156,6 +154,23 @@
             </div>
         </section>
 
+        <!-- Über Uns Section -->
+        <section id="ueber-uns" class="about-section">
+            <h2>Über Uns</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Ben Constantin Pohl</h3>
+                    <p>Hallo! Ich bin Ben Constantin Pohl und als Automatenoperator tätig. Ich betreibe mehrere Automaten im Kreis Frankfurt am Main und übernehme dabei alles selbst – von der Befüllung über die Wartung bis zur Organisation des gesamten Betriebs.</p>
+                    <p>Durch meine Erfahrung im täglichen Umgang mit verschiedenen Standorten, meiner zuverlässigen Arbeitsweise und meinem unternehmerischen Denken bringe ich die perfekten Voraussetzungen für eine Automaten-Standortakquise mit. Ich weiß genau, worauf es ankommt, um langfristig funktionierende Standorte aufzubauen und zu betreuen.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Anja Pohl</h3>
+                    <p>Mein Name ist Anja Pohl. Nach vielen Jahren Erfahrung im Vertrieb habe ich gelernt, wie wichtig klare Kommunikation, Verlässlichkeit und ein professionelles Auftreten sind. Durch meine vertriebliche Stärke und mein Verständnis für Kundenbedürfnisse bringe ich die optimalen Voraussetzungen für eine Automaten-Standortakquise mit.</p>
+                    <p>Ich weiß, wie man potenzielle Partner überzeugt, nachhaltige Geschäftsbeziehungen aufbaut und Standorte findet, die langfristig funktionieren. Meine Vertriebserfahrung kombiniere ich dabei mit Engagement, Organisationstalent und einem stets kundenorientierten Ansatz.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="kontakt" class="contact-section">
             <div class="contact-card">
@@ -195,8 +210,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="phone">Telefon</label>
-                    <input type="tel" id="phone" name="phone">
+                    <label for="phone">Telefon *</label>
+                    <input type="tel" id="phone" name="phone" required>
                 </div>
                 
                 <div class="form-group">

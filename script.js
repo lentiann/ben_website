@@ -15,40 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Theme Toggle Functionality
-const themeToggle = document.getElementById('themeToggle');
-const themeIcon = document.getElementById('themeIcon');
-const body = document.body;
-
-// Check for saved theme in localStorage
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-    body.classList.add(savedTheme);
-    updateThemeIcon(savedTheme === 'light-theme');
-} else {
-    // Default to dark theme
-    updateThemeIcon(false);
-}
-
-// Theme toggle event listener
-themeToggle.addEventListener('click', () => {
-    const isLightTheme = body.classList.toggle('light-theme');
-    updateThemeIcon(isLightTheme);
-
-    // Save theme preference
-    if (isLightTheme) {
-        localStorage.setItem('theme', 'light-theme');
-    } else {
-        localStorage.removeItem('theme');
-    }
-});
-
-// Update theme icon
-function updateThemeIcon(isLight) {
-    themeIcon.textContent = isLight ? '☀️' : '🌙';
-}
-
-// Arc text functionality removed - using logo instead
 
 // Helper function to show status messages
 function showStatus(message, type) {
